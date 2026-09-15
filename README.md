@@ -8,10 +8,10 @@
 
 | Field | Value |
 |---|---|
-| **Team Name** | [Your Team Name] |
+| **Team Name** | Astra-Developers |
 | **Track** | [AI / DevOps / Sustainability / Open] |
-| **Team Lead** | [Name] — [email@ibm.com] |
-| **Members** | [Name 1], [Name 2], [Name 3] |
+| **Team Lead** | Parth Prajapati — parthprajapati0018@gmail.com |
+| **Members** | Arman Shaikh, Parin Patel, Bhavya Patel |
 
 ---
 

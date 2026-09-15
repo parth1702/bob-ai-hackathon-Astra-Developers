@@ -1,4 +1,6 @@
 import os
+from dotenv import load_dotenv
+load_dotenv()  # Load .env file (GROQ_API_KEY, GEMINI_API_KEY, etc.)
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from api.routes.shipments import router as shipments_router

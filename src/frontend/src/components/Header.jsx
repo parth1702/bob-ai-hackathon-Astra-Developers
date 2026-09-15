@@ -57,7 +57,7 @@ export default function Header({ activeTab, setActiveTab, kpis }) {
             <ShieldAlert size={20} color="#f59e0b" />
             <div>
               <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>At-Risk Cargo Value</div>
-              <div style={{ fontSize: '1.1rem', fontWeight: 700, color: '#fbbf24' }}>${(kpis.atRiskValueUsd / 1000000).toFixed(2)}M</div>
+              <div style={{ fontSize: '1.1rem', fontWeight: 700, color: '#fbbf24' }}>₹{((kpis.atRiskValueUsd * 85) / 10000000).toFixed(2)} Cr</div>
             </div>
           </div>
 

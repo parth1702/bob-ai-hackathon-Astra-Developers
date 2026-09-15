@@ -72,10 +72,10 @@ export default function FleetRebalancePanel({ fleetAssets, rebalancePlans, onRed
                     <span style={{ color: 'var(--text-dim)' }}>Transit:</span> <strong>{plan.est_transit_hours} hrs</strong> ({plan.distance_km} km)
                   </div>
                   <div>
-                    <span style={{ color: 'var(--text-dim)' }}>Reposition Cost:</span> <strong>${plan.estimated_reposition_cost_usd}</strong>
+                    <span style={{ color: 'var(--text-dim)' }}>Reposition Cost:</span> <strong>₹{(plan.estimated_reposition_cost_usd * 85).toLocaleString('en-IN')}</strong>
                   </div>
                   <div style={{ gridColumn: 'span 2', color: '#34d399' }}>
-                    <span>Prevented Loss:</span> <strong>${plan.potential_prevented_loss_usd.toLocaleString()} USD</strong>
+                    <span>Prevented Loss:</span> <strong>₹{(plan.potential_prevented_loss_usd * 85).toLocaleString('en-IN')} INR</strong>
                   </div>
                 </div>
               </div>

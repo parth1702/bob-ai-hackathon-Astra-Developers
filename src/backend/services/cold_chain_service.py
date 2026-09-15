@@ -135,8 +135,8 @@ class ColdChainService:
         min_temp = min(temps) if temps else curr_temp
         max_temp = max(temps) if temps else curr_temp
         
-        target_min = shipment.target_temp_min_c or 2.0
-        target_max = shipment.target_temp_max_c or 8.0
+        target_min = shipment.target_temp_min_c if shipment.target_temp_min_c is not None else 2.0
+        target_max = shipment.target_temp_max_c if shipment.target_temp_max_c is not None else 8.0
 
         excursion_points = [p for p in telemetry if p.temperature_c < target_min or p.temperature_c > target_max]
         total_excursion_mins = len(excursion_points) * 30

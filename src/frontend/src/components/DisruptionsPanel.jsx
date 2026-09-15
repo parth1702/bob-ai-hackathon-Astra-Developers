@@ -54,7 +54,7 @@ export default function DisruptionsPanel({
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '10px', paddingTop: '8px', borderTop: '1px solid rgba(255,255,255,0.06)', fontSize: '0.75rem' }}>
                   <span style={{ color: 'var(--text-dim)' }}>Epicenter: <strong style={{ color: '#d1d5db' }}>{d.epicenter_name}</strong></span>
                   <span style={{ color: '#fb7185', fontWeight: 600 }}>
-                    {d.impacted_shipment_count} Shipments At Risk (${(d.impacted_cargo_value_usd / 1000).toFixed(0)}K)
+                    {d.impacted_shipment_count} Shipments At Risk (₹{((d.impacted_cargo_value_usd * 85) / 100000).toFixed(1)} Lakh)
                   </span>
                 </div>
               </div>
@@ -103,7 +103,7 @@ export default function DisruptionsPanel({
                   </div>
 
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '8px', fontSize: '0.75rem', color: 'var(--text-muted)' }}>
-                    <span>Value: <strong style={{ color: '#34d399' }}>${s.value_usd.toLocaleString()}</strong></span>
+                    <span>Value: <strong style={{ color: '#34d399' }}>₹{(s.value_usd * 85).toLocaleString('en-IN')}</strong></span>
                     <span>Carrier: <strong style={{ color: '#d1d5db' }}>{s.carrier}</strong></span>
                     <span>Delay: <strong style={{ color: '#fb7185' }}>+{s.delay_hours}h</strong></span>
                     {s.requires_cold_chain && (

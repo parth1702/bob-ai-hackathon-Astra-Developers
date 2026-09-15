@@ -46,7 +46,7 @@ export default function RerouteModal({ shipment, onClose, onApplyReroute }) {
               Dynamic Re-Routing: {shipment.tracking_number}
             </h2>
             <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-              {shipment.cargo_name} • Value: ${shipment.value_usd.toLocaleString()}
+              {shipment.cargo_name} • Value: ₹{(shipment.value_usd * 85).toLocaleString('en-IN')}
             </p>
           </div>
           <button
@@ -77,7 +77,7 @@ export default function RerouteModal({ shipment, onClose, onApplyReroute }) {
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <span style={{ color: 'var(--text-dim)' }}>Transit Cost:</span>
-                <span>${currentRoute.cost_usd.toLocaleString()}</span>
+                <span>₹{(currentRoute.cost_usd * 85).toLocaleString('en-IN')}</span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <span style={{ color: 'var(--text-dim)' }}>Reliability Score:</span>
@@ -107,7 +107,7 @@ export default function RerouteModal({ shipment, onClose, onApplyReroute }) {
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <span style={{ color: 'var(--text-dim)' }}>Transit Cost:</span>
-                  <span>${chosenAlt.cost_usd.toLocaleString()}</span>
+                  <span>₹{(chosenAlt.cost_usd * 85).toLocaleString('en-IN')}</span>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <span style={{ color: 'var(--text-dim)' }}>Reliability Score:</span>
@@ -160,7 +160,7 @@ export default function RerouteModal({ shipment, onClose, onApplyReroute }) {
                     <span>{alt.name} ({alt.carrier})</span>
                   </div>
                   <div style={{ color: 'var(--text-muted)' }}>
-                    ETA: {alt.eta_hours}h • ${alt.cost_usd.toLocaleString()}
+                    ETA: {alt.eta_hours}h • ₹{(alt.cost_usd * 85).toLocaleString('en-IN')}
                   </div>
                 </label>
               ))}

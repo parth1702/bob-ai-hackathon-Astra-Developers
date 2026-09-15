@@ -184,7 +184,7 @@ export default function ColdChainMonitor() {
               <div style={{ padding: '10px', borderRadius: '6px', background: 'rgba(255,255,255,0.02)', textAlign: 'center' }}>
                 <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>CARGO VALUE AT RISK</div>
                 <div style={{ fontSize: '1.25rem', fontWeight: 700, color: activeReport.cargo_value_at_risk_usd > 0 ? '#fb7185' : '#34d399' }}>
-                  ${(activeReport.cargo_value_at_risk_usd / 1000).toFixed(0)}K
+                  ₹{((activeReport.cargo_value_at_risk_usd * 85) / 100000).toFixed(1)} Lakh
                 </div>
               </div>
             </div>
